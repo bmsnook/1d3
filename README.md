@@ -21,12 +21,13 @@ The rest is self-explanatory.
 
 ## Example:
 ```
-bmsnook@Mac-Mini:~/github/1d3% ./1d3.py 
+bmsnook@Mac-Mini:~/github/1d3% ./1d3.py
 Let the Fates decide for you
 Designate 3 choices to roll for: 
-Specify choice A: Oak Grove Market
-Specify choice B: Einstein Bros Bagels
-Specify choice C: Panera
+    Specify choice A: Oak Grove Market
+    Specify choice B: Einstein Bros Bagels
+    Specify choice C: Panera
+
 Let's roll less than 10 times so we're not here all day
 How many times should I roll? 2
 
@@ -42,31 +43,43 @@ Rolling...
     / \
    / A \
   /     \
- / B   C \
+ / C   B \
 /_________\
+     ^
+    / \
+   / C \
+  /     \
+ / B   A \
+/_________\
+Results of 2 rolls:
+    Rolled A     1 time  (Oak Grove Market)
+    Rolled B     0 times (Einstein Bros Bagels)
+    Rolled C     1 time  (Panera)
+There are 2 winners: {'A': 1, 'C': 1}
+Continuing to roll to break the tie
      ^
     / \
    / B \
   /     \
- / C   A \
+ / A   C \
 /_________\
-Results of 2 rolls:
-    Rolled A     1 times (Oak Grove Market)
-    Rolled B     1 times (Einstein Bros Bagels)
-    Rolled C     0 times (Panera)
-There are 2 winners: {'A': 1, 'B': 1}
+Results of 3 rolls:
+    Rolled A     1 time  (Oak Grove Market)
+    Rolled B     1 time  (Einstein Bros Bagels)
+    Rolled C     1 time  (Panera)
+There are 3 winners: {'A': 1, 'B': 1, 'C': 1}
 Continuing to roll to break the tie
      ^
     / \
    / A \
   /     \
- / B   C \
+ / C   B \
 /_________\
 
-Results of 3 rolls:
+Results of 4 rolls:
     Rolled A     2 times (Oak Grove Market)
-    Rolled B     1 times (Einstein Bros Bagels)
-    Rolled C     0 times (Panera)
+    Rolled B     1 time  (Einstein Bros Bagels)
+    Rolled C     1 time  (Panera)
 
 Your choice is made; the winner is A: Oak Grove Market
 bmsnook@Mac-Mini:~/github/1d3% 

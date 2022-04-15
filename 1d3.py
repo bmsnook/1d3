@@ -24,7 +24,7 @@ def prompt_for_choices():
 	for each in dieOrientation:
 		choice = ""
 		while (choice == ""):
-			print('Specify choice {0}: '.format(each), end='')
+			print('    Specify choice {0}: '.format(each), end='')
 			choice = input()
 		dieChoices[each] = choice
 	return dieChoices
@@ -71,6 +71,7 @@ def list_choices():
 		print('    {} :: {}'.format(each,dieChoices[each]))
 
 def prompt_times_to_roll():
+	print('')
 	print("Let's roll less than 10 times so we're not here all day")
 	rollsToDo=""
 	while not rollsToDo.isnumeric():
@@ -83,8 +84,12 @@ def prompt_times_to_roll():
 def print_stats():
 	print('Results of {} rolls:'.format(rollsDone))
 	for each in dieSides:
-		print('    Rolled {0} {1:>5} times ({2})'.\
-			format(each,countRolls[each],dieChoices[each]))
+		print('    Rolled {0} {1:>5} time'.format(each,countRolls[each]), end='')
+		if countRolls[each] == 1:
+			print('  ', end='')
+		else:
+			print('s ', end='')
+		print('({0})'.format(dieChoices[each]))
 
 
 print("Let the Fates decide for you")
